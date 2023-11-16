@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  animation-name: show;
+  animation-duration: 2s;
+}
+
+h1 {
+  margin: 1em 0;
+  font-size: 5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.2em;
+}
+
+.search-form {
+  max-width: 800px;
+  margin: 50px auto;
+  animation-name: move;
+  animation-duration: 2s;
+}
+
+.search {
+  height: 4em;
+  text-align: center;
+  width: 120%;
+  padding: 1em;
+  font-size: 1.5em;
+  border: 10px solid #c8bbbb;
+  border-radius: 5px;
+  position: relative;
+  left: -10%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+
+.output {
+  position: relative;
+}
+
+.output li {
+  list-style-type: none;
+  margin-top: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #d8d8d8;
+  padding: 20px;
+  border: 5px solid #c8bbbb;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  transition: background 0.2s;
+  font-size: 1.5rem;
+  color: rgb(65, 62, 62);
+}
+
+.output li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+
+.output li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(50%);
+  } to {
+    transform: translateY(0);
+  }
+}
