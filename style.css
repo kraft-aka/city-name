@@ -54,7 +54,7 @@ input {
 .output li {
   list-style-type: none;
   margin-top: 1em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(203, 171, 171, 0.15);
   border-bottom: 1px solid #d8d8d8;
   padding: 20px;
   border: 5px solid #c8bbbb;
@@ -77,10 +77,37 @@ input {
   background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
 }
 
+.name {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.hl {
+  background-color: tomato;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 1em 2.5em;
+  border-radius: .2em;
+  border: 10px solid #c8bbbb;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #c8bbbb;
+  box-shadow: 5px 5px 20px #df9191;
+}
+
 @keyframes show {
   from {
     opacity: 0;
-  } to {
+  }
+
+  to {
     opacity: 1;
   }
 }
@@ -88,7 +115,9 @@ input {
 @keyframes move {
   from {
     transform: translateY(50%);
-  } to {
+  }
+
+  to {
     transform: translateY(0);
   }
 }
